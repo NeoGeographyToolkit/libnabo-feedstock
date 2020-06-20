@@ -1,0 +1,38 @@
+{% set version = "2df86e0" %}
+
+package:
+  name: libnabo
+  version: {{ version }}
+
+source:
+  git_url: git@github.com:ethz-asl/libnabo.git
+  git_tag: {{ version }}
+  patches:
+
+build:
+  number: {{ version }}
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - cmake
+  host:
+    - boost  1.68.0
+    - eigen  3.3.7
+  run:
+    - boost  1.68.0
+    - eigen  3.3.7
+
+test:
+  commands:
+  files:
+
+about:
+  home: https://github.com/ethz-asl/libnabo
+  license: BSD
+  summary: A fast K Nearest Neighbor library for low-dimensional spaces
+  description:
+
+extra:
+  recipe-maintainers:
