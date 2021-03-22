@@ -1,4 +1,4 @@
-{% set version = "2df86e0" %}
+{% set version = "isis4.4.0" %} # synched up to isis dependencies for this version
 
 package:
   name: libnabo
@@ -6,11 +6,11 @@ package:
 
 source:
   git_url: git@github.com:ethz-asl/libnabo.git
-  git_tag: {{ version }}
+  git_tag: {{ "2df86e0" }}
   patches:
 
 build:
-  number: {{ version }}
+  number: 0
 
 requirements:
   build:
@@ -18,11 +18,14 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
   host:
-    - boost  1.68.0
+    - boost  1.68
     - eigen  3.3.7
+    - isis   4.4.0
+
   run:
-    - boost  1.68.0
+    - boost  1.68
     - eigen  3.3.7
+    - isis   4.4.0
 
 test:
   commands:
@@ -36,3 +39,4 @@ about:
 
 extra:
   recipe-maintainers:
+    - oleg.alexandrov@gmail.com
