@@ -1,12 +1,12 @@
-{% set version = "isis5.0.1" %} # synched up to isis dependencies for this version
+{% set version = "isis6" %} # synched up to isis dependencies for this version
 
 package:
   name: libnabo
   version: {{ version }}
 
 source:
-  git_url: git@github.com:ethz-asl/libnabo.git
-  git_tag: {{ "2df86e0" }}
+  git_url: git@github.com:oleg-alexandrov/libnabo.git
+  git_tag: {{ "bf5f327" }}
   patches:
 
 build:
@@ -18,12 +18,12 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
   host:
-    - boost  1.68.0
-    - eigen  3.3.7
+    - boost                     1.68.0
+    - eigen                     3.4.0
 
   run:
-    - boost  1.68.0
-    - eigen  3.3.7
+    - boost                     1.68.0
+    - eigen                     3.4.0
 
 test:
   commands:
