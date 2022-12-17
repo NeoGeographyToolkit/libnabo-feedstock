@@ -1,4 +1,4 @@
-{% set version = "isis6" %} # synched up to isis dependencies for this version
+{% set version = "isis7" %} # synched up to isis dependencies for this version
 
 package:
   name: libnabo
@@ -18,11 +18,11 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
   host:
-    - boost                     1.68.0
+    - boost                     1.72.0
     - eigen                     3.4.0
 
   run:
-    - boost                     1.68.0
+    - boost                     1.72.0
     - eigen                     3.4.0
 
 test:
