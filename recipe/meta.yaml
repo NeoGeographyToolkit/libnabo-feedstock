@@ -1,12 +1,12 @@
-{% set version = "asp3.4.0_alpha" %} # synched up to isis dependencies for this version
+{% set version = "asp3.5.0" %} # synched up to isis dependencies for this version
 
 package:
   name: libnabo
   version: {{ version }}
 
 source:
-  git_url: git@github.com:oleg-alexandrov/libnabo.git
-  git_tag: {{ "bf5f327" }}
+  git_url: git@github.com:NeoGeographyToolkit/libnabo.git
+#  git_tag: {{ "bf5f327" }}
   patches:
 
 build:
