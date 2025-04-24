@@ -10,7 +10,7 @@ source:
   patches:
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -18,13 +18,14 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
   host:
-    - boost                     1.78
+    - boost                     1.78.0
     - eigen                     3.4.0
-    - llvm-openmp
+    - llvm-openmp               16.0.6
 
   run:
-    - boost                     1.78
+    - boost                     1.78.0
     - eigen                     3.4.0
+    - llvm-openmp               16.0.6
 
 test:
   commands:
